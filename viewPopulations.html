@@ -4,7 +4,9 @@
 	<br/>
 		<input type="text" ng-model="name" />
 	<br/>
-  <h2>The {{data.name}} is {{data.value | number}} {{data.units}}</h2>
+	<ul>
+	<li ng-repeat="info in data | filter:name">The {{info.name}} is {{info.value | number}} {{info.units}}</li>
+  </ul>
 
 	<a href="/project5/#!/home"> Back</a>
 </div>
