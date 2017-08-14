@@ -16,8 +16,7 @@ mainApp.config(function($routeProvider) {
 });
 
 
-
-  mainApp.controller('StudentController', ['$scope','$http', function($scope, $http) {
+mainApp.controller('StudentController', ['$scope','$http', function($scope, $http) {
     $scope.method = 'GET';
     $scope.url = "https://s3-us-west-2.amazonaws.com/joshuamfernandes/california.json";
     $http({method:$scope.method, url:$scope.url})
@@ -26,7 +25,7 @@ mainApp.config(function($routeProvider) {
       }, function(response){
         $scope.data = response.data || 'Request failed';
       });
-  }]);
+
 
 	$scope.message = "Click on the hyper link to view the students list.";
-});
+}]);
