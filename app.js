@@ -18,7 +18,7 @@ mainApp.config(function($routeProvider) {
 
 mainApp.controller('PopulationController', ['$scope','$http', function($scope, $http) {
     $scope.method = 'GET';
-    $scope.url = "https://s3-us-west-2.amazonaws.com/joshuamfernandes/california.json";
+    $scope.url = "https://s3-us-west-2.amazonaws.com/joshuamfernandes/multiple.json";
     $http({method:$scope.method, url:$scope.url})
       .then(function(response) {
         $scope.data = response.data;
