@@ -3,11 +3,11 @@ var mainApp = angular.module("mainApp", ['ngRoute']);
 mainApp.config(function($routeProvider) {
 	$routeProvider
 		.when('/home', {
-			templateUrl: '../assets/templates/home.html',
+			templateUrl: '/assets/templates/home.html',
 			controller: 'PopulationController'
 		})
 		.when('/viewPopulations', {
-			templateUrl: '../assets/templates/viewPopulations.html',
+			templateUrl: '/assets/templates/viewPopulations.html',
 			controller: 'PopulationController'
 		})
 		.otherwise({
