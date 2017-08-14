@@ -5,13 +5,16 @@ mainApp.config(function($routeProvider) {
 		.when('/home', {
 			templateUrl: 'home.html',
 			controller: 'StudentController'
+      $location.search('key', null)
 		})
 		.when('/viewStudents', {
 			templateUrl: 'viewStudents.html',
 			controller: 'StudentController'
+      $location.search('key', null)
 		})
 		.otherwise({
 			redirectTo: '/home'
+      $location.search('key', null)
 		});
 });
 
