@@ -15,12 +15,18 @@ mainApp.config(function($routeProvider) {
 		});
 });
 
-mainApp.controller('StudentController', function($scope) {
-	$scope.students = [
-		{name: 'Mark Waugh', city:'New York'},
-		{name: 'Steve Jonathan', city:'London'},
-		{name: 'John Marcus', city:'Paris'}
-	];
+
+
+  mainApp.controller('StudentController', ['$scope','$http', function($scope, $http) {
+    $scope.method = 'GET';
+    $scope.url = "https://s3-us-west-2.amazonaws.com/joshuamfernandes/california.json";
+    $http({method:$scope.method, url:$scope.url})
+      .then(function(response) {
+        $scope.data = response.data;
+      }, function(response){
+        $scope.data = response.data || 'Request failed';
+      });
+  }]);
 
 	$scope.message = "Click on the hyper link to view the students list.";
 });

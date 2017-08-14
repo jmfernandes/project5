@@ -5,7 +5,7 @@
 		<input type="text" ng-model="name" />
 	<br/>
 	<ul>
-		<li ng-repeat="student in students | filter:name">{{student.name}} , {{student.city}}</li>
+		<li ng-repeat="info in data">The {{info.name}} is {{info.value | number}} {{info.units}}</li>
 	</ul>
 
 	<a href="/project5/#!/home"> Back</a>
