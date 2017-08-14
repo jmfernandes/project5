@@ -8,7 +8,7 @@
 	<tr><th>State</th><th>Population</th></tr>
 
 	<tr ng-repeat="info in data | filter:name">
-		<td>{{info.name}}</td>
+		<td>{{info.name}}:</td>
 		<td>{{info.value | number}} {{info.units}}</td>
 	</tr>
 </table>
