@@ -1,20 +1,18 @@
 var mainApp = angular.module("mainApp", ['ngRoute']);
 
 mainApp.config(function($routeProvider) {
+  $location.search('key', null);
 	$routeProvider
 		.when('/home', {
 			templateUrl: 'home.html',
-			controller: 'StudentController',
-      $location.search('key', null)
+			controller: 'StudentController'
 		})
 		.when('/viewStudents', {
 			templateUrl: 'viewStudents.html',
-			controller: 'StudentController',
-      $location.search('key', null)
+			controller: 'StudentController'
 		})
 		.otherwise({
-			redirectTo: '/home',
-      $location.search('key', null)
+			redirectTo: '/home'
 		});
 });
 
