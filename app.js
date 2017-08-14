@@ -1,7 +1,6 @@
 var mainApp = angular.module("mainApp", ['ngRoute']);
 
 mainApp.config(function($routeProvider) {
-  $location.search('key', null);
 	$routeProvider
 		.when('/home', {
 			templateUrl: 'home.html',
