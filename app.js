@@ -4,16 +4,16 @@ mainApp.config(function($routeProvider) {
 	$routeProvider
 		.when('/home', {
 			templateUrl: 'home.html',
-			controller: 'StudentController'
+			controller: 'StudentController',
       $location.search('key', null)
 		})
 		.when('/viewStudents', {
 			templateUrl: 'viewStudents.html',
-			controller: 'StudentController'
+			controller: 'StudentController',
       $location.search('key', null)
 		})
 		.otherwise({
-			redirectTo: '/home'
+			redirectTo: '/home',
       $location.search('key', null)
 		});
 });
