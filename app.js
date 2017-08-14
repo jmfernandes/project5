@@ -4,11 +4,11 @@ mainApp.config(function($routeProvider) {
 	$routeProvider
 		.when('/home', {
 			templateUrl: 'home.html',
-			controller: 'StudentController'
+			controller: 'PopulationController'
 		})
-		.when('/viewStudents', {
-			templateUrl: 'viewStudents.html',
-			controller: 'StudentController'
+		.when('/viewPopulations', {
+			templateUrl: 'viewPopulations.html',
+			controller: 'PopulationController'
 		})
 		.otherwise({
 			redirectTo: '/home'
@@ -16,7 +16,7 @@ mainApp.config(function($routeProvider) {
 });
 
 
-mainApp.controller('StudentController', ['$scope','$http', function($scope, $http) {
+mainApp.controller('PopulationController', ['$scope','$http', function($scope, $http) {
     $scope.method = 'GET';
     $scope.url = "https://s3-us-west-2.amazonaws.com/joshuamfernandes/california.json";
     $http({method:$scope.method, url:$scope.url})
@@ -27,5 +27,5 @@ mainApp.controller('StudentController', ['$scope','$http', function($scope, $htt
       });
 
 
-	$scope.message = "Click on the hyper link to view the students list.";
+	$scope.message = "Click on the hyper link to view the population list.";
 }]);
