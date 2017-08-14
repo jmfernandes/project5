@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="http://joshuamfernandes.com/assets/css/main.css">
+    <title>project4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="http://joshuamfernandes.com/assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://joshuamfernandes.com/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://joshuamfernandes.com/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="http://joshuamfernandes.com/assets/favicons/manifest.json">
+<link rel="mask-icon" href="http://joshuamfernandes.com/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="http://joshuamfernandes.com/assets/favicons/favicon.ico">
+<meta name="msapplication-config" content="http://joshuamfernandes.com/assets/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <script>
+$(function(){
+  $("#header").load("http://joshuamfernandes.com/assets/templates/header.html");
+  $("#footer").load("http://joshuamfernandes.com/assets/templates/footer.html");
+});
+</script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post-content">
+
+
+          <article ng-app="booksInventoryApp">
+            <section ng-controller="booksCtrl">
+              <h2>The {{data.name}} is {{data.value | number}} {{data.units}}</h2>
+            </section>
+          </article>
+
+
+
+          </article>
+        </div>
+      </main>
+      <div id="footer"></div>
+
+<script src="js/app.js"></script>
+<!-- Controllers -->
+<script src="js/controllers/MainController.js"></script>
+  </body>
+</html>
