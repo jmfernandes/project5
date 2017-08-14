@@ -13,6 +13,7 @@ mainApp.config(function($routeProvider) {
 		.otherwise({
 			redirectTo: '/home'
 		});
+    $location.search('key', null)
 });
 
 mainApp.controller('StudentController', function($scope) {
